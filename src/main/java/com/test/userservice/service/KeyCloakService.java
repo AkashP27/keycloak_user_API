@@ -62,6 +62,10 @@ public class KeyCloakService {
                 .remove();
     }
 
+    public void addRole(String role_name) {
+        KeycloakConfig.addRealmRole(role_name);
+    }
+
     public UsersResource getInstance(){
         return KeycloakConfig.getInstance().realm(KeycloakConfig.realm).users();
     }

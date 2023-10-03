@@ -37,4 +37,10 @@ public class KeyCloakController {
         service.deleteUser(userId);
         return "User Deleted Successfully.";
     }
+
+    @GetMapping()
+    public String addRole(@RequestParam("role") String role_name){
+        service.addRole(role_name);
+        return "Role Added Successfully.";
+    }
 }
